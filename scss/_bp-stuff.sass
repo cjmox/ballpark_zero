@@ -1,0 +1,610 @@
+// Mixins
+
+@mixin clearfix()
+  &::after
+    content: ""
+    display: table
+    clear: both
+
+
+@mixin button-reversed-variant($color, $background, $border)
+  color: $color
+  background-color: $background
+  border-color: $border
+
+  &:focus,
+  &.focus
+    color: $background
+    background-color: darken($color, 10%)
+    border-color: darken($color, 25%)
+  &:hover
+    color: $background
+    background-color: $color
+    border-color: $color
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle
+    color: $background
+    background-color: $color
+    border-color: $color
+    &:hover,
+    &:focus,
+    &.focus
+      color: $background
+      background-color: $color
+      border-color: $color
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle
+    background-image: none
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] &
+    &:hover,
+    &:focus,
+    &.focus
+      background-color: $color
+      border-color: $color
+  .badge
+    color: $color
+    background-color: $background
+
+
+// Variables
+
+$white: #FFF
+
+$brand-primary:   #2C82C9
+$brand-secondary: #2C82C9
+
+$brand-success:   #00C274
+$brand-danger:    #F4364C
+$brand-info:      #2C82C9
+$brand-warning:   #FF9F36
+$brand-pending:   #00B2B6
+
+$page-bg:         #edf0f2
+$text-color:      #3A3D3E
+$text-muted:      #949698
+$link-color:      #2C82C9
+$link-color-hover: #0F93FF
+
+$font-size-base: 0.875rem
+$font-size-lg:   1rem
+$font-size-sm:   0.7rem
+$font-size-xs:   0.6rem
+$line-height-base: 1.25
+
+$font-regular: 400
+$font-semibold: 600
+$font-bold: 700
+
+$border-color:       #eee
+$border-color-solid: #f2f2f2
+
+$box-shadow:         0 2px 4px rgba(0, 0, 0, .1)
+
+$border-radius-base:    6px
+$page-margin:           30px
+$page-margin-sm:        15px
+
+// site max width
+// enter desired width plus 60px for inside $page-margin
+$max-width: 1260px
+
+// navs
+$nav-spacing:          24px
+
+$topnav-height:       50px
+$topnav-height-sm:    40px
+$mainnav-color:        $white
+$mainnav-bg-primary:   #0f8dc6
+$mainnav-bg-secondary: #0fa1c6
+
+$subnav-color:         rgba(0, 0, 0, .5)
+$subnav-active-color:  $link-color
+$subnav-height:        50px
+
+$navtab-height:        50px
+
+// content
+$content-bg:    $white
+$content-padding-v: 18px
+$content-padding-h: 18px
+$content-padding: $content-padding-v $content-padding-h
+
+$content-padding-v-sm: 9px
+$content-padding-h-sm: 15px
+$content-padding-sm: $content-padding-v-sm $content-padding-h-sm
+
+// forms
+$input-border-radius:  6px
+$input-shadow-color:   rgba(165, 167, 168, 0.3)
+$input-border-color:   #C0C6CC
+$input-bg:             $white
+
+$input-active-bg:           #F3FAFF
+$input-active-border:       rgba(55,162,254,0.2)
+$input-active-shadow-color: rgba(55, 162, 254, 0.2)
+
+$input-disabled-bg: #f3f3f3
+$input-disabled-color: #bfbfbf
+
+// buttons
+$btn-primary-bg:           $brand-primary
+$btn-primary-color:        $white
+$btn-secondary-bg:         #505D92
+$btn-secondary-color:      $white
+
+// drawer
+$drawer-height: 75px
+
+$sidedrawer-width: 400px
+
+// indicators
+$indicator-default-bg:     $white
+$indicator-default-color:  #DCDEE0
+$indicator-neutral-bg:     #A7ABAE
+$indicator-neutral-color:  $white
+$indicator-primary-bg:     $brand-primary
+$indicator-primary-color:  $white
+$indicator-danger-bg:      #F43636
+$indicator-danger-color:   $white
+
+// timers
+$timer-height:        50px
+$timer-action-width:  $timer-height
+$timer-action-height: $timer-height
+
+// timeline
+$timeline-position: 210px
+$timeline-width: 4px
+$timeline-margin: 30px
+$timeline-arrow-size: 20px
+$timeline-dot-size: 40px
+$timeline-dot-size-sm: 20px
+$timeline-dot-border-width: 4px
+
+// tables
+$table-border-color: #EFEFEF
+
+// progress bars
+$progress-bar-bg: #F2F2F2
+$progress-bar-default: #ccc
+$progress-bar-success: #00CD1C
+$progress-bar-danger: #DD0012
+$progress-bar-danger-bg: #FF7571
+
+
+// activities
+
+
+// bootstrap overrrides
+$dropdown-link-hover-bg:  $mainnav-bg-primary
+$popover-border-color:    rgba(0,0,0,.05)
+
+// breakpoints
+
+$screen-sm-min: 768px
+$screen-md-min: 992px
+$screen-lg-min: 1200px
+$screen-xs-max: ($screen-sm-min - 1)
+$screen-sm-max: ($screen-md-min - 1)
+$screen-md-max: ($screen-lg-min - 1)
+
+// themes
+$theme-blue-main:          #035FBA
+$theme-blue-secondary:     #2C82C9
+$theme-purple-main:        #9365B8
+$theme-purple-secondary:   #B865B8
+$theme-orange-main:        #FB4D26
+$theme-orange-secondary:   #FF990F
+$theme-darkblue-main:      #2C3E50
+$theme-darkblue-secondary: #2980B9
+$theme-green-main:         #03ABBA
+$theme-green-secondary:    #1ABC9C
+$theme-red-main:           #C92C2C
+$theme-red-secondary:      #D50404
+
+
+
+// Other stuff
+
+
+*, *::before, *::after 
+  box-sizing: border-box
+
+body 
+  font-family: "Proxima Nova", "proxima-nova", Helvetica, Arial, sans-serif
+  font-size: 0.875rem
+  line-height: 1.25
+  color: #3A3D3E
+  background-color: #EDF0F2
+
+// Base Button Styles
+.bpbtn
+  display: inline-block
+  font-size: 16px
+  font-weight: $font-bold
+  line-height: 1
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  cursor: pointer
+  border-radius: $border-radius-base
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.06), 0px 2px 2px 0px rgba(0,0,0,0.08), 0px 1px 1px 0px rgba(0,0,0,0.10)
+  border: 2px solid
+  transition: all .15s ease-in-out
+  // Default button size
+  padding: 9px 15px // makes 36px tall
+  font-size: 14px
+
+  &:hover, &:focus
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.15), 0px 4px 5px 0px rgba(0,0,0,0.08), 0px 2px 2px 0px rgba(0,0,0,0.05)
+
+  &:active
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.06), 0px 1px 1px 0px rgba(0,0,0,0.08)
+
+// Base Diabled Styles
+.bpbtn-disabled
+  cursor: not-allowed
+  opacity: .50
+  box-shadow: none
+
+  &:hover, &:focus
+    box-shadow: none
+
+
+// Button Sizes
+.bpbtn-lg
+  padding: 15px 19px // makes 50px tall
+  font-size: 16px
+
+.bpbtn-sm
+  padding: 7px 11px
+  font-size: 12px
+
+
+// Primary Button
+.bpbtn-primary
+  color: #fff
+  background-color: $link-color
+  border-color: $link-color
+
+  &:hover, &:focus
+    color: #fff
+
+  &:focus 
+    outline: none
+
+  &:focus, &:active
+    background-color: darken($link-color, 10)
+    border-color: darken($link-color, 10)
+
+
+// Success Button
+.bpbtn-success
+  color: #fff
+  background-color: $brand-success
+  border-color: $brand-success
+
+  &:hover, &:focus
+    color: #fff
+
+  &:focus
+    border-color: darken($brand-success, 10%)
+
+  &:active
+    background-color: darken($brand-success, 10)
+    border-color: darken($brand-success, 10)
+
+
+// Danger Button
+.bpbtn-danger
+  color: #fff
+  background-color: $brand-danger
+  border-color: $brand-danger
+
+  &:hover, &:focus
+    color: #fff
+
+  &:active
+    background-color: darken($brand-danger, 10)
+    border-color: darken($brand-danger, 10)
+
+// Warning Button
+.bpbtn-warning
+  color: #fff
+  background-color: $brand-warning
+  border-color: $brand-warning
+
+  &:hover, &:focus
+    color: #fff
+
+  &:active
+    background-color: darken($brand-warning, 10)
+    border-color: darken($brand-warning, 10)
+
+
+// Link Button
+.bpbtn-link
+  color: $link-color
+  background-color: transparent
+  border-color: transparent
+  box-shadow: none
+
+  &:hover, &:focus, &:active
+    color: $link-color-hover
+    background-color: transparent
+    border-color: transparent
+    box-shadow: none
+  
+  &.bpbtn-danger
+    color: $brand-danger
+    &:hover, &:focus, &:active
+      color: darken($brand-danger, 15%)
+      
+// Text Button
+.bpbtn-text
+  color: $text-color
+  background-color: transparent
+  border-color: transparent
+  box-shadow: none
+
+  &:hover, &:focus, &:active
+    color: $text-color
+    background-color: transparent
+    border-color: transparent
+    box-shadow: none
+
+// Outline Button Base Styles
+.bpbtn-outline
+  color: $link-color
+  background-color: #fff
+
+  &:hover, &:focus
+    color: $link-color
+    background-color: #fff
+
+  &:active
+    color: darken($link-color, 10)
+    border-color: darken($link-color, 10)
+
+
+// Secondary Outline Button Color Overrides
+.bpbtn-success.bpbtn-outline
+  color: $brand-success
+
+  &:hover, &:focus
+    color: $brand-success
+    background-color: #fff
+
+  &:active
+    color: darken($brand-success, 10)
+    border-color: darken($brand-success, 10)
+
+
+// Danger Outline Button Color Overrides
+.bpbtn-danger.bpbtn-outline
+  color: $brand-danger
+
+  &:hover, &:focus
+    color: $brand-danger
+    background-color: #fff
+
+  &:active
+    color: darken($brand-danger, 10)
+    border-color: darken($brand-danger, 10)
+
+
+// Danger Outline Button Color Overrides
+.bpbtn-warning.bpbtn-outline
+  color: $brand-warning
+
+  &:hover, &:focus
+    color: $brand-warning
+    background-color: #fff
+
+  &:active
+    color: darken($brand-warning, 10)
+    border-color: darken($brand-warning, 10)
+
+
+// White Button
+.bpbtn-white
+  color: $link-color
+  background-color: #fff
+  border-color: #fff
+
+  &:hover, &:focus
+    color: $link-color
+    background-color: #fff
+
+  &:focus
+    border-color: darken($link-color, 10%)
+    outline: none
+
+
+// White Button Muted
+.bpbtn-white.bpbtn-muted
+  color: lighten($text-color, 20)
+
+  &:hover, &:focus
+    color: $link-color
+
+
+// Button Display Helper Classes
+// Adds margin-right to all buttons inside of it
+.bpbtn-action-row
+
+  .bpbtn
+    margin-right: .5rem
+
+
+// Button Group
+.bpbtn-group
+  .bpbtn
+    box-shadow: none
+    border-radius: 0px
+    border-right: 2px solid rgba(0, 0, 0, .1)
+
+    &:first-of-type
+      border-top-left-radius: $border-radius-base
+      border-bottom-left-radius: $border-radius-base
+
+    &:last-of-type
+      border-top-right-radius: $border-radius-base
+      border-bottom-right-radius: $border-radius-base
+      border-right: inherit
+
+
+// Button Group Primary Color Overrides
+.bpbtn-group .bpbtn-primary
+  &:hover, &:focus
+    background-color: darken($link-color, 5)
+    border-color: darken($link-color, 5)
+
+  &:active
+    background-color: darken($link-color, 10)
+    border-color: darken($link-color, 10)
+
+
+// Button Block
+.bpbtn-block
+  display: block
+
+
+// Button Half Block
+.bpbtn-block-half
+  width: 48%
+
+.bpbtn-block-half + .bpbtn-block-half
+  margin-left: 4%
+
+
+// Split buttons
+.bpbtn-split
+  .bpbtn
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+  .dropdown
+    .bpbtn
+      border-top-right-radius: 8px
+      border-bottom-right-radius: 8px
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      &.bpbtn-primary
+        svg
+          fill: $white
+
+  &.bpbtn-block
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: flex-start
+    align-content: flex-start
+    align-items: flex-start
+    .bpbtn
+      order: 0
+      flex: 0 1 100%
+      align-self: auto
+    .dropdown .bpbtn
+      order: 0
+      flex: 0 1 40px
+      align-self: auto
+
+// Other
+
+.bpbtn-combo
+  display: inline-block
+  width: 50%
+  .bpbtn
+    width: 100%
+  &:first-of-type
+    border-right: 2px solid
+    .bpbtn
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+  &:last-of-type
+    .bpbtn
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+
+.bpbtn-icon-delete
+  font-size: 120%
+  font-weight: bold
+
+// Kitchen sink page styles
+// These should be moved somewhere else in the future
+
+.style-guide .bpbtn-action-row h3
+  margin-top: 2rem
+
+
+
+.modal-backdrop 
+  background: #138dc6
+  background-image: linear-gradient(to right, #138dc6, #139ec3)
+  background-repeat: no-repeat
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1050
+
+
+.modal-backdrop.in 
+  opacity: 0.95
+
+
+.modal 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  z-index: 1051
+  outline: 0
+  border-radius: 8px
+  background-color: #fff
+  width: 900px
+  box-shadow: 0 12px 32px 0 rgba(0, 0, 0, .06), 0 8px 16px 0 rgba(0, 0, 0, .08), 0 4px 8px 0 rgba(0, 0, 0, .1)
+
+
+.modal .close 
+  background: none
+  border: none
+  outline: none
+  position: absolute
+  right: -35px
+  top: -25px
+
+.card
+  margin-bottom: 20px
+  overflow: hidden
+  background: $content-bg
+  position: relative
+  +clearfix
+  @media screen
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1)
+    border-radius: $border-radius-base
+  @media print
+    border: 1px solid rgba(0, 0, 0, .1)
+    page-break-inside: avoid
+
+  &:hover,
+  &:focus
+    text-decoration: none
+
+.card-title
+  padding: $content-padding
+
+.card-title-sm
+  padding: $content-padding-sm
+
+.card-block
+  padding: $content-padding
+  overflow: hidden
+  @media print
+    padding: 9px
