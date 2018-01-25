@@ -393,12 +393,12 @@ body {
 .card.zero-state.zero-invoices .zero-illo {
   position: absolute;
   right: -40px;
-  bottom: -40px;
+  bottom: -25px;
   width: 108px; }
   .card.zero-state.zero-invoices .zero-illo.zero-illo-left {
     position: absolute;
     left: -40px;
-    bottom: -40px;
+    bottom: -25px;
     width: 301px; }
 .card.zero-state.zero-expenses .zero-illo {
   position: absolute;
