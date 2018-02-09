@@ -385,11 +385,16 @@ body {
     height: auto;
     width: 100%; }
 
-.card.zero-state.zero-clients .zero-illo, .card.zero-state.zero-projects .zero-illo, .card.zero-state.zero-estimates .zero-illo {
+.card.zero-state.zero-clients .zero-illo, .card.zero-state.zero-projects .zero-illo {
   position: absolute;
   bottom: -40px;
   right: -40px;
   width: 180px; }
+.card.zero-state.zero-estimates .zero-illo {
+  position: absolute;
+  bottom: -20px;
+  right: -70px;
+  width: 204px; }
 .card.zero-state.zero-invoices .zero-illo {
   position: absolute;
   right: -40px;
@@ -405,10 +410,12 @@ body {
   top: -25px;
   left: -40px;
   width: 201px; }
+
 .card.zero-state.zero-timers {
-  background-image: none; }
+  background-image: none;
+  min-height: 230px; }
   .card.zero-state.zero-timers .zero-illo {
     position: absolute;
-    bottom: -40px;
-    right: -40px;
+    bottom: -20px;
+    right: -30px;
     width: 120px; }

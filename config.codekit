@@ -58,6 +58,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/bg-zero-dashboard-fence@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 117122,
+		"inputAbbreviatedPath": "\/img\/bg-zero-dashboard-fence@2x.png",
+		"outputAbbreviatedPath": "\/img\/bg-zero-dashboard-fence@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bg-zero-dashboard.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108798,
+		"inputAbbreviatedPath": "\/img\/bg-zero-dashboard.png",
+		"outputAbbreviatedPath": "\/img\/bg-zero-dashboard.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bg-zero-dashboard@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 191929,
+		"inputAbbreviatedPath": "\/img\/bg-zero-dashboard@2x.png",
+		"outputAbbreviatedPath": "\/img\/bg-zero-dashboard@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bg-zero-estimates.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25247,
+		"inputAbbreviatedPath": "\/img\/bg-zero-estimates.png",
+		"outputAbbreviatedPath": "\/img\/bg-zero-estimates.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/bg-zero-expenses.png": {
 		"fileType": 32768,
 		"ignore": 0,

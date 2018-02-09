@@ -27,13 +27,18 @@
 
 .card.zero-state
   &.zero-clients,
-  &.zero-projects,
-  &.zero-estimates
+  &.zero-projects
     .zero-illo
       position: absolute
       bottom: -40px
       right: -40px
       width: 180px
+  &.zero-estimates
+    .zero-illo
+      position: absolute
+      bottom: -20px
+      right: -70px
+      width: 204px
   &.zero-invoices
     .zero-illo
       position: absolute
@@ -51,11 +56,14 @@
       top: -25px
       left: -40px
       width: 201px
+      
+
+.card.zero-state
   &.zero-timers
     background-image: none
+    min-height: 230px
     .zero-illo
       position: absolute
-      bottom: -40px
-      right: -40px
+      bottom: -20px
+      right: -30px
       width: 120px
-      
